@@ -14,13 +14,12 @@
 
     <script>
         function resultado() {
-            var pais = document.querySelector('input#txtpais')
+            var p = window.document.querySelector('input#txtpais')
             var res = window.document.querySelector('div#res')
-            var p = String(pais.value)
 
-            res.innerHTML = `<p>Seu país é <strong>${p}</strong></p>`
+            res.innerHTML = `<p>Seu país é <strong>${p.value}</strong></p>`
 
-            if (p == 'Brasil', 'brasil', 'BRASIL'){
+            if (p.value == 'Brasil'){
                 res.innerHTML += '<p>Você é Brasileiro</p>'
             }else{
                 res.innerHTML +='<p>Você é Estrangeiro</p>'
